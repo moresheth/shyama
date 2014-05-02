@@ -1,0 +1,22 @@
+{
+  "products_per_page": 18,
+  "footer_titles": "#666666",
+  "font": "Helvetica",
+  "featured_order": "views",
+  "main_block_titles": "#ffffff",
+  "background": "#ffffff",
+  "link_rollovers": "#00b8ed",
+  "featured_products": 18,
+  "main_block_text": "#999999",
+  "show_search": true,
+  "main_block_links": "#cccccc",
+  "show_newest": true,
+  "blocks_background": "#eeeeee",
+  "show_top_selling": false,
+  "show_inventory_bars": true,
+  "main_block_lines": "#4b4b4b",
+  "blocks_links": "#666666",
+  "inner_blocks": "#222222",
+  "show_products_feed": true,
+  "main_block_background": "#333333"
+}

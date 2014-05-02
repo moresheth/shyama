@@ -1,0 +1,20 @@
+{% if products.current != blank %}
+
+<ul id="product_list">
+{% for product in products.current %}
+	<li id="product_{{ forloop.index }}" class="general {% cycle 'one', 'two', 'three' %}">
+		<a href="{{ product.url }}" title="View {{ product.name | escape }}">
+			<img src="{{ product.image | product_image_url size:"large" }}" alt="Image of {{ product.name | escape }}" />
+			<h3 class="product_price">{{ product.price | money_with_sign }}{% if product.on_sale %} <span class="on_sale">On Sale!</span>{% endif %}</h3>
+		</a>
+	</li>
+{% endfor %}
+</ul>
+
+{{ products.current | paginate }}
+
+{% else %}
+
+<p class="alert_no_products"><span>No products found.</span></p>
+
+{% endif %}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ store.name }} &mdash; {{ page.name }}</title>
+	<meta name="description" content="{{ page.meta_description }}" />
+	<meta name="keywords" content="{{ page.meta_keywords }}" />
+	<meta charset="utf-8" /> 
+	<meta name="robots" content="all" /> 
+	<meta name="googlebot" content="index,follow" /> 
+	<meta name="robots" content="index,follow" /> 
+	<link href="/products.rss" rel="alternate" title="Products RSS Feed" type="application/rss+xml" />
+	<link href="{{ theme | theme_css_url }}" media="screen" rel="Stylesheet" type="text/css" />
+	<script src="{{ 'prototype' | theme_js_url }}" type="text/javascript"></script>
+	<script src="{{ 'effects' | theme_js_url }}" type="text/javascript"></script>
+	<script src="{{ 'store' | theme_js_url }}" type="text/javascript"></script>
+	<script src="{{ 'fancyzoom' | theme_js_url }}" type="text/javascript"></script>
+	<script src="{{ 'api' | theme_js_url }}" type="text/javascript"></script>
+	<script type="text/javascript" charset="utf-8">
+		Store.currency_sign	= "{{ store.currency.sign }}";
+		Store.item_singular	= "item";
+		Store.item_plural	= "items";
+		Store.discount_off	= "% off";
+		Store.show_shipping = {{ cart.shipping.enabled }};
+	</script>
+
+  {{ head_content }}
+</head>
+
+<body id="{{ page.permalink }}" class="{{ page.category }}">
+<div id="topnav">
+	<div class="topnav-wrapper">
+		<ul>
+			<li><a class="topnav-work" href="http://www.shyamagolden.com/">work</a></li>
+			<li><a class="topnav-blog" href="http://www.shynanigans.com/">blog</a></li>
+			<li><a class="topnav-about" href="http://www.shyamagolden.com/about/">about</a></li>
+			<li><a class="topnav-store" href="http://www.okllama.com/">store</a></li>
+		</ul>
+		<div id="sideshoppingcart">
+			<h3><a href="/cart" title="View Cart">Shopping Cart</a></h3>
+		</div>
+
+    <div id="minicart">
+      <a href="/cart" title="View Cart"><span id="minicart_count">{{ cart.item_count | pluralize: 'item', 'items' }}</span> <span id="minicart_view">&raquo; view cart</span></a>
+    </div>
+
+  </div><!--topnav-wrapper-->
+</div><!--topnav-->
+
+<div id="bgwrapper">
+	<div id="wrapper">
+
+		<div id="header">
+			<h2 id="logo" {% if theme.image != blank %}class="image"{% endif %}><a href="/" id="store_home" title="{{ store.name | escape }}"><span class="store_name">{{ store.name }}</span>{% if theme.image != blank %}<img src="{{ theme.image.url }}" />{% endif %}</a></h2>
+		</div><!--header-->
+
+<div id="page_name">
+{% if errors != blank %}
+<div id="error" class="error">
+	<ul>
+{% for error in errors %}<li>{{ error }}</li>{% endfor %}
+	</ul>
+</div>
+{% endif %}
+</div>
+
+		<div id="main">
+                  <p style="font-family: Helvetica; font-weight: bold;"><span style="color:#e14167; font-family: Helvetica; font-weight: bold; font-size: 23px;"></span>Free shipping when you buy any 2 items!</p>
+{% if page.category == 'custom' %}
+{{ page_content | paragraphs }}
+{% else %}
+{{ page_content }}
+{% endif %}
+		</div>
+
+		<div id="btmnav">
+			<ul>
+				<li><a class="btmnav-twitter" href="http://www.twitter.com/shyamagolden">twitter</a></li>
+				<li><a class="btmnav-flickr" href="http://www.flickr.com/photos/shyamagolden/">flickr</a></li>
+				<li><a class="btmnav-vimeo" href="http://vimeo.com/shyamagolden">vimeo</a></li>
+				<li><a class="btmnav-facebook" href="http://www.facebook.com/pages/Shyama-Golden/108637445850968">facebook</a></li>
+				<li><a class="btmnav-feed" href="http://www.shyamagolden.com/feed/">feed</a></li>
+				<li><a class="btmnav-email" href="mailto:art@shyamagolden.com">email</a></li>
+			</ul>
+		</div>
+	</div><!--#wrapper-->
+</div><!--#bgwrapper-->
+</body>
+</html>
