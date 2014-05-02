@@ -28,12 +28,12 @@ body{
 #header {
   margin: 0;
   width: 100%;
-  height: auto;
+  height: 90px;
   z-index: 150;
   top: 0;
   position: fixed;
   background-color: #fff;
-  background-color: rgba(243, 241, 237, .86);
+  background-color: rgba(243, 241, 237, 0);
 }
 #header:hover {
   background-color: rgba(243, 241, 237, 1);
@@ -48,7 +48,7 @@ body{
   width: 92%;
   position: relative;
   height: 100%;
-  min-height: 150px;
+  min-height: 90px;
 }
 
 .logo { height: 100%; position: absolute; }
@@ -68,6 +68,12 @@ body{
   float: right;
   width: 70%;
 }
+img.site-logo{
+    height: 84px;
+    width: 126px;
+    margin-top: 18px;
+}
+
 
 .main-nav { float: left; width: 50%; position: relative; padding-top: 34px; margin-bottom: 37px; }
 .nav-menu { float: left; width: 50%; position: relative; padding-top: 34px; margin-bottom: 37px; }
@@ -116,9 +122,6 @@ ul.nav-menu li:hover > ul,
 .nav-menu li .current-menu-item > a { background-color: #bdbdbd; color: #000; font-weight: 700; }
 
 
-@media (max-width: 782px) {
-  .admin-bar .site-header { top: 46px; }
-}
 @media (max-width: 720px) {
   body { padding: 0 !important; }
   .site-header { position: relative; background-color: transparent; }
@@ -176,11 +179,12 @@ ul.nav-menu li:hover > ul,
 
 
 
+
 .main-nav{
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 34px;
+    top: 16px;
     right: 0;
     width: 400px;
 }
@@ -270,23 +274,46 @@ ul.nav-menu li:hover > ul,
     font-weight: 400;
 }
 .post .meta{
-  font-size: 12px;
+    font-size: 12px;
+}
+.post .body{
+    text-align: left;
+}
+body.club_monaco .post .body p:first-child strong,
+body.theme_garden .post h2{
+    font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
+    text-transform: none;
 }
 
 #feed{
-  margin-top: 120px;
+    margin-top: 120px;
 }
-
+#feed h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
 
 @media (max-width: 720px) {
     #header {
+      height: 150px;
       position: relative;
+    }
+    #header .site-header-inner{
+        min-height: 150px;
+    }
+    .logo{
+        height: 90px;
+        margin: 0;
     }
     #feed{
       margin-top: 0;
     }
     .site-navigation{
         height: 41px;
+        margin: 0 auto;
         width: 100%;
     }
     .main-nav{
@@ -374,7 +401,7 @@ ul.nav-menu li:hover > ul,
           <div class="logo">
             <div class="logo-inner">
               <a class="home-link" href="http://www.rightbrainstorm.com/" title="shyama golden" rel="home">
-                <img class="site-logo" src="http://www.rightbrainstorm.com/wp-content/uploads/2014/04/shyama1.png" alt="shyama golden" />
+                <img class="site-logo" src="http://www.rightbrainstorm.com/wp-content/uploads/2014/05/logo23.png" alt="shyama golden" />
                 <h1 class="site-title">shyama golden</h1>
                 <h2 class="site-description"></h2>
               </a>
@@ -408,6 +435,11 @@ ul.nav-menu li:hover > ul,
 
             {block:Posts}
             <div class="post masonry_visible {PostType} {TagsAsClasses} {block:Photoset}photoset{/block:Photoset}" {block:ContentSource}data-source="{PlaintextSourceURL}"{/block:ContentSource} data-permalink="{Permalink}">
+
+              {block:Photo}
+                <h2 class="caption">{Caption}</h2>
+              {/block:Photo}
+
               <div class="attachment">
                 {block:Photo}
 
@@ -492,8 +524,6 @@ ul.nav-menu li:hover > ul,
                   {/block:Lines}
                 </ul>
                 {/block:Chat}
-
-                {Caption}
 
                 {block:PermalinkPage}
                 {block:ContentSource}
