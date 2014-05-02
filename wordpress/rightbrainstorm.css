@@ -1,0 +1,227 @@
+/*
+Theme Name: Konzept Child
+Theme URI:
+Author:
+Author URI:
+Description: Child theme for Konzept theme.
+Template: konzept
+Version:
+License:
+License URI:
+Tags:
+Text Domain:
+*/
+
+@import "//cloud.typography.com/6031692/628044/css/fonts.css";
+
+body{
+    background: #f3f1ed;
+    font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+textarea, kbd,
+.site-description,
+.single-meta,
+.single-meta .single-tags a,
+.comments-title h2,
+.comment-body,
+.no-comments,
+#commentform textarea,
+.project-slides .wp-caption-text h4,
+.project-slide .description,
+.site-footer,
+.page-description,
+.entry-meta .entry-tags a,
+.project-meta-description,
+.project-description,
+.site-footer .copyright_notice,
+.nav-menu li a{
+    font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6,
+.header-back-to-blog-message,
+.header-search .search-field,
+.header-search .search-message,
+.comment-metadata,
+.comment-navigation .nav-next a:after,
+.related-posts-title small,
+input.wpcf7-submit,
+.konzept-thumbnail .thumbnail-title,
+.thumbnail-plus,
+.element-text .thumbnail-link-title,
+.project-slide .description h4,
+.portfolio-indicator,
+.back .label,
+.pf_nav li a,
+.nav-menu li a,
+.entry-title,
+.page-title,
+.entry-meta .author,
+.entry-meta .date,
+.entry-meta .edit-link,
+.blog-comments-value a,
+.single-meta .single-date,
+.navigation a,
+.comments-title a,
+.comment-author .fn,
+.form-submit  input[type="submit"],
+.related-posts-title a,
+.konzept-thumbnail .thumbnail-categories,
+.konzept-thumbnail .thumbnail-plus,
+.element .symbol,
+.element .categories,
+.project-meta-heading,
+.sharing-icons-tooltip,
+.sharing-icons-tooltip:after,
+.project-title,
+.menu-toggle{
+    font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
+    font-weight: 700;
+}
+
+.site-header{
+    background-color: rgba(243, 241, 237, .86);
+}
+.site-header:hover { background-color: rgba(243, 241, 237, 1); }
+.site-navigation{
+    width: 70%;
+}
+/* Hide the link for "All Work" */
+.menu-col-categories{ display:none }
+
+.main-nav{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 34px;
+    right: 0;
+    width: 400px;
+}
+
+.nav-menu li{
+    clear: none;
+    width: 100px;
+    height: 41px;
+}
+
+.menu-item a{
+    background-repeat: no-repeat;
+    display: block;
+    text-indent: -9999px;
+    background-size: 100px 41px;
+    width: 100px;
+    height: 41px;
+}
+.current-menu-item a:after{
+    display: block;
+    content: "";
+    width: 14px;
+    height: 11px;
+    background-size: 14px 11px;
+    background-image: url(/assets/nav/carrot.png);
+    position: absolute;
+    bottom: -15px;
+    left: 43px;
+}
+
+/* Work */
+#menu-item-47 a{
+    background-image: url(/assets/nav/default/nav_01work.png);
+}
+#menu-item-47 a:hover,
+#menu-item-47 a:active,
+#menu-item-47 a:focus{
+    background-image: url(/assets/nav/hover/nav_01work.png);
+}
+#menu-item-47.current-menu-item a{
+    background-image: url(/assets/nav/selected/nav_01work.png);
+}
+
+/* About */
+#menu-item-48 a{
+    background-image: url(/assets/nav/default/nav_02about.png);
+}
+#menu-item-48 a:hover,
+#menu-item-48 a:active,
+#menu-item-48 a:focus{
+    background-image: url(/assets/nav/hover/nav_02about.png);
+}
+#menu-item-48.current-menu-item a{
+    background-image: url(/assets/nav/selected/nav_02about.png);
+}
+
+/* Store */
+#menu-item-219 a{
+    background-image: url(/assets/nav/default/nav_04store.png);
+}
+#menu-item-219 a:hover,
+#menu-item-219 a:active,
+#menu-item-219 a:focus{
+    background-image: url(/assets/nav/hover/nav_04store.png);
+}
+#menu-item-219.current-menu-item a{
+    background-image: url(/assets/nav/selected/nav_04store.png);
+}
+
+/* Blog */
+#menu-item-218 a{
+    background-image: url(/assets/nav/default/nav_03blog.png);
+}
+#menu-item-218 a:hover,
+#menu-item-218 a:active,
+#menu-item-218 a:focus{
+    background-image: url(/assets/nav/hover/nav_03blog.png);
+}
+#menu-item-218.current-menu-item a{
+    background-image: url(/assets/nav/selected/nav_03blog.png);
+}
+
+
+@media (max-width: 720px) {
+    .site-navigation{
+        height: 41px;
+        width: 100%;
+    }
+    .main-nav{
+        margin-left: -200px;
+        top: 0;
+        left: 50%;
+        right: auto;
+        width: 400px;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    ul.nav-menu, div.nav-menu > ul {
+        display: block;
+    }
+    .nav-menu > li{
+        margin: 0;
+    }
+    .nav-menu li{
+        float: left;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .site-navigation{
+        height: 33px;
+    }
+    .main-nav{
+        margin-left: -160px;
+        width: 320px;
+    }
+    .nav-menu li{
+        width: 80px;
+        height: 33px;
+    }
+    .menu-item a{
+        background-size: 80px 33px;
+        width: 80px;
+        height: 33px;
+    }
+}
