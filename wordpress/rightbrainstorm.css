@@ -13,6 +13,7 @@ Text Domain:
 */
 
 @import "//cloud.typography.com/6031692/628044/css/fonts.css";
+@import url("../konzept/style.css");
 
 body{
     background: #f3f1ed;
@@ -79,11 +80,54 @@ input.wpcf7-submit,
 .project-title,
 .menu-toggle{
     font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
-    font-weight: 700;
+    font-weight: 400; 
+    font-style: normal;
+
 }
 
+h1.page-title{
+    margin-top: 30px;
+    font-size: 50px;
+    border-bottom: none;
+    display: none;
+}
+
+h3{
+    font-size: 50px;
+    font-style: italic;
+}
+
+.page-title,
+.konzept-thumbnail .thumbnail-categories,
+.konzept-thumbnail .thumbnail-plus,
+.element .symbol,
+.element .categories{
+    font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
+    font-weight: 400; 
+    font-style: italic;
+    text-transform:capitalize;
+}
+
+
+div.thumbnail-plus
+
+{
+    display: none;
+}
+
+.element:hover .thumbnail-hover, .element:hover .symbol, .element:hover .categories, .element:hover .thumbnail-plu
+
+{
+/* I changed the height of the header and reducing the top padding of .main-nav and now the resize doesn't work as well, sorry! can you fix that? */
+}
+img.site-logo{
+height: 84px;
+width: 126px;
+margin-bottom: 30px;;
+}
 .site-header{
-    background-color: rgba(243, 241, 237, .86);
+    height: 90px;
+    background-color: rgba(243, 241, 237, .0);
 }
 .site-header:hover { background-color: rgba(243, 241, 237, 1); }
 .site-navigation{
@@ -91,12 +135,19 @@ input.wpcf7-submit,
 }
 /* Hide the link for "All Work" */
 .menu-col-categories{ display:none }
+/* Hide comments" */
+div#comments.comments-area.clearfix{ display:none }
+
+p{
+    font-size: 18px;
+}
+
 
 .main-nav{
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 34px;
+    top: 16px;
     right: 0;
     width: 400px;
 }
