@@ -110,7 +110,7 @@ img.site-logo{
 }
 .site-header{
     height: 90px;
-    background-color: rgba(243, 241, 237, 0.0);
+    background-color: rgba(243, 241, 237, 0);
 }
 .site-header:hover { background-color: rgba(243, 241, 237, 1); }
 .site-header .site-header-inner{
