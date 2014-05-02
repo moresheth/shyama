@@ -38,10 +38,7 @@ textarea, kbd,
 .project-meta-description,
 .project-description,
 .site-footer .copyright_notice,
-.nav-menu li a{
-    font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
-    font-weight: 400;
-}
+.nav-menu li a,
 h1, h2, h3, h4, h5, h6,
 .header-back-to-blog-message,
 .header-search .search-field,
@@ -59,7 +56,6 @@ input.wpcf7-submit,
 .pf_nav li a,
 .nav-menu li a,
 .entry-title,
-.page-title,
 .entry-meta .author,
 .entry-meta .date,
 .entry-meta .edit-link,
@@ -70,10 +66,6 @@ input.wpcf7-submit,
 .comment-author .fn,
 .form-submit  input[type="submit"],
 .related-posts-title a,
-.konzept-thumbnail .thumbnail-categories,
-.konzept-thumbnail .thumbnail-plus,
-.element .symbol,
-.element .categories,
 .project-meta-heading,
 .sharing-icons-tooltip,
 .sharing-icons-tooltip:after,
@@ -82,7 +74,6 @@ input.wpcf7-submit,
     font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
     font-weight: 400; 
     font-style: normal;
-
 }
 
 h1.page-title{
@@ -105,29 +96,21 @@ h3{
     font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
     font-weight: 400; 
     font-style: italic;
-    text-transform:capitalize;
+    text-transform: capitalize;
 }
 
-
-div.thumbnail-plus
-
-{
+div.thumbnail-plus{
     display: none;
 }
 
-.element:hover .thumbnail-hover, .element:hover .symbol, .element:hover .categories, .element:hover .thumbnail-plu
-
-{
-/* I changed the height of the header and reducing the top padding of .main-nav and now the resize doesn't work as well, sorry! can you fix that? */
-}
 img.site-logo{
-height: 84px;
-width: 126px;
-margin-bottom: 30px;;
+    height: 84px;
+    width: 126px;
+    margin-bottom: 30px;
 }
 .site-header{
     height: 90px;
-    background-color: rgba(243, 241, 237, .0);
+    background-color: rgba(243, 241, 237, 0.0);
 }
 .site-header:hover { background-color: rgba(243, 241, 237, 1); }
 .site-navigation{
@@ -141,7 +124,6 @@ div#comments.comments-area.clearfix{ display:none }
 p{
     font-size: 18px;
 }
-
 
 .main-nav{
     padding: 0;
