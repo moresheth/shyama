@@ -2926,3 +2926,301 @@ p, blockquote, ul, ol, dl {
 ============================================================*/
 
 
+@import "//cloud.typography.com/6031692/628044/css/fonts.css";
+
+body{
+    background: #f3f1ed;
+    font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#header {
+  margin: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 150;
+  top: 0;
+  position: fixed;
+  background-color: #fff;
+  background-color: rgba(243, 241, 237, 0);
+}
+#header:hover {
+  background-color: rgba(243, 241, 237, 1);
+}
+#header, #header:hover {
+  -webkit-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+}
+#header .site-header-inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 92%;
+  position: relative;
+  height: 100%;
+  min-height: 90px;
+}
+
+.logo { height: 100%; position: absolute; }
+.logo-inner { display: table; height: 100%; }
+.home-link {
+  display: table-cell;
+  vertical-align: middle;
+  border: 0 !important;
+}
+.home-link:hover { text-decoration: none; }
+.home-link:focus { outline: 0; }
+.site-title {  font-weight: 900; color: #000; margin: 0 0 5px 0; }
+.site-title:hover { color: #3B95B1; }
+.site-description { font-family: Roboto, sans-serif; font-size: 13px; text-decoration: none; margin: 0; }
+.site-logo { outline: 0; max-width: 100%; }
+.site-logo + .site-title,
+.site-logo + .site-title + .site-description { display: none; }
+
+.site-navigation {
+  position: relative;
+  float: right;
+  width: 70%;
+}
+img.site-logo{
+    height: 84px;
+    width: 126px;
+    margin-top: 18px;
+}
+
+
+.main-nav { float: left; width: 50%; position: relative; padding-top: 34px; margin-bottom: 37px; }
+.nav-menu { float: left; width: 50%; position: relative; padding-top: 34px; margin-bottom: 37px; }
+.main-nav .nav-menu { float: none; width: auto; padding-top: 0; margin-bottom: 0; }
+.pf_nav { float: right; margin: 0; padding: 0; width: 50%; position: relative; padding-top: 34px; margin-bottom: 37px; }
+.pf_nav li { line-height: 1; }
+.pf_nav li a { display: inline-block; color: #969696; font: 700 68.75%/1 Novecentowide, sans-serif; }
+.pf_nav li a.selected { color: #000; }
+.pf_nav li a:hover { color: #000; text-decoration: none; }
+
+.nav-menu .has-submenu > a:after { content: "]"; font: 100%/1 WebSymbolsRegular, sans-serif; padding-left: 6px; position: absolute; }
+.nav-menu .has-submenu .has-submenu > a:after { content: "]"; line-height: 1.375; right: 10px; top: 4px; }
+ul.nav-menu,
+div.nav-menu > ul { margin: 0; padding: 0; }
+.nav-menu li { clear: both; position: relative; float: left; line-height: 1; }
+.nav-menu li a { display: inline-block; color: #969696; text-decoration: none; text-transform: uppercase; }
+.nav-menu > li > a { line-height: 1; }
+
+
+@media (max-width: 720px) {
+  body { padding: 0 !important; }
+  .site-header { position: relative; background-color: transparent; }
+  .site-header, .site-header:hover { transition: none; -webkit-transition: none; }
+  .site-navigation { float: none; width: 100%; }
+  .menu-main-menu-container { float: none; width: 100%; padding-top: 0; margin-bottom: 0; }
+  .nav-menu li { float: none; }
+  .nav-menu li a { color: #505050; }
+  .pf_nav { display: none; }
+}
+
+/* Mobile menu */
+@media (max-width: 720px) {
+  .site-navigation { top: 0 !important; position: relative; margin: 25px auto; }
+  .logo { position: relative; text-align: center; margin: 30px 0; }
+    .logo-inner { display: block; }
+      .home-link { display: block; }
+      ul.nav-menu,
+      div.nav-menu > ul { }
+      .nav-menu > li { text-align: left; }
+      .nav-menu > li:first-child { margin-left: 0; }
+}
+
+@media (max-width: 720px) {
+  .main-nav  { display: block; margin-left: 0; padding: 0; width: 100%; margin-bottom: 0; }
+  .nav-menu  { padding: 0; margin-bottom: 0; }
+  ul.nav-menu,
+  div.nav-menu > ul { display: none; }
+  
+  ul.nav-menu ul a,
+  .nav-menu ul ul a { color: #282832; font-weight: 700; }
+  .nav-menu > li > a { margin-top: 0; }
+  .nav-menu .has-submenu > a:after { display: none; }
+  .nav-menu ul > li:first-child > a { border-radius: 0; }
+  .nav-menu ul > li:last-child > a { border-radius: 0; }
+  .nav-menu > .has-submenu > a { padding: 15px; }
+  .nav-menu > .has-submenu:hover > a,
+  .nav-menu > .has-submenu > a:hover { border-radius: 0; padding: 15px; }
+  ul.nav-menu ul a,
+  .nav-menu ul ul a { min-width: 0; }
+  .nav-menu li a { display: block; color: #282832; font: 400 100%/1 Roboto, sans-serif; text-transform: none; }
+  .nav-menu li li a { padding: 15px; font-weight: 400; }
+  .nav-menu > li.has-submenu + li { margin-left: 0; }
+  .nav-menu > li.has-submenu { margin-left: 0; }
+  .nav-menu > li { margin-left: 0; margin-bottom: 3px; }
+  ul.nav-menu ul a:hover,
+  .nav-menu ul ul a:hover { font-weight: 400; }
+  .nav-menu li li:hover > a,
+  .nav-menu li li a:hover { font-weight: 400; }
+  .nav-menu li li:hover > a,
+  .nav-menu li li a:hover { background-color: transparent; }
+  .nav-menu > .has-submenu:hover > a,
+  .nav-menu > .has-submenu > a:hover { background-color: transparent; }
+}
+
+
+
+
+.main-nav{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 400px;
+}
+
+.nav-menu li{
+    clear: none;
+    width: 100px;
+    height: 41px;
+    text-align: left;
+}
+
+.menu-item a{
+    background-repeat: no-repeat;
+    border: 0;
+    display: block;
+    text-indent: -9999px;
+    background-size: 100px 41px;
+    width: 100px;
+    height: 41px;
+}
+.current-menu-item a:after{
+    display: block;
+    content: "";
+    width: 14px;
+    height: 11px;
+    background-size: 14px 11px;
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/carrot.png);
+    position: absolute;
+    bottom: -15px;
+    left: 43px;
+}
+
+/* Work */
+#menu-item-47 a{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/default/nav_01work.png);
+}
+#menu-item-47 a:hover,
+#menu-item-47 a:active,
+#menu-item-47 a:focus{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/hover/nav_01work.png);
+}
+#menu-item-47.current-menu-item a{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/selected/nav_01work.png);
+}
+
+/* About */
+#menu-item-48 a{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/default/nav_02about.png);
+}
+#menu-item-48 a:hover,
+#menu-item-48 a:active,
+#menu-item-48 a:focus{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/hover/nav_02about.png);
+}
+#menu-item-48.current-menu-item a{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/selected/nav_02about.png);
+}
+
+/* Store */
+#menu-item-219 a{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/default/nav_04store.png);
+}
+#menu-item-219 a:hover,
+#menu-item-219 a:active,
+#menu-item-219 a:focus{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/hover/nav_04store.png);
+}
+#menu-item-219.current-menu-item a{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/selected/nav_04store.png);
+}
+
+/* Blog */
+#menu-item-218 a{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/default/nav_03blog.png);
+}
+#menu-item-218 a:hover,
+#menu-item-218 a:active,
+#menu-item-218 a:focus{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/hover/nav_03blog.png);
+}
+#menu-item-218.current-menu-item a{
+    background-image: url(http://www.rightbrainstorm.com/assets/nav/selected/nav_03blog.png);
+}
+
+
+
+
+#content{
+    margin-top: 120px !important;
+    padding-top: 0 !important;
+}
+
+@media (max-width: 720px) {
+    #header {
+      height: 150px;
+      position: relative;
+    }
+    #header .site-header-inner{
+        min-height: 150px;
+    }
+    .logo{
+        text-align: center;
+        height: 90px;
+        margin: 0;
+    }
+    img.site-logo{
+        margin: 18px auto 0;
+    }
+    #content{
+      margin-top: 0 !important;
+    }
+    .site-navigation{
+        height: 41px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .main-nav{
+        margin-left: -200px;
+        top: -16px;
+        left: 50%;
+        right: auto;
+        width: 400px;
+    }
+    ul.nav-menu, div.nav-menu > ul {
+        display: block;
+    }
+    .nav-menu > li{
+        margin: 0;
+    }
+    .nav-menu li{
+        float: left;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .site-navigation{
+        height: 33px;
+    }
+    .main-nav{
+        margin-left: -160px;
+        width: 320px;
+    }
+    .nav-menu li{
+        width: 80px;
+        height: 33px;
+    }
+    .menu-item a{
+        background-size: 80px 33px;
+        width: 80px;
+        height: 33px;
+    }
+}
+

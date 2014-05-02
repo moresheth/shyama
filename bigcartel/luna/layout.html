@@ -44,36 +44,28 @@
   </head>
 
   <body id="{{ page.permalink }}_page" class="{{ page.category }} no_transition">
-    <div id="site_header" class="strip">
-      <div class="canvas">
-        <nav id="main_nav">
-          <ul>
-            <li {% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' or page.full_url contains '/artist/' %}class="selected"{% endif %}><a href="/products">Products</a></li>{% for page in pages.all limit:2 %}<li {% if page.full_url contains page.url %}class="selected"{% endif %}>{{ page | link_to }}</li>{% endfor %}<li {% if page.full_url contains '/contact' %}class="selected"{% endif %}><a href="/contact">Contact</a></li><li {% if page.full_url contains '/cart' %}class="selected"{% endif %}><a href="/cart">Cart</a></li>
-          </ul>
-        </nav>
 
-        <header>
-          {% if theme.images.header != blank %}
-          <div id="branding">
-            <a href="/">
-              <h2>{{ page.name }}</h2>
-              <img src="{{ theme.images.header.url }}" alt="{{ store.name }}">
+    <div class="row site-header" id="header">
+      <div class="site-header-inner clearfix">
+        <div class="logo">
+          <div class="logo-inner">
+            <a class="home-link" href="http://www.rightbrainstorm.com/" title="shyama golden" rel="home">
+              <img class="site-logo" src="http://www.rightbrainstorm.com/wp-content/uploads/2014/05/logo23.png" alt="shyama golden" />
+              <h1 class="site-title">shyama golden</h1>
+              <h2 class="site-description"></h2>
             </a>
           </div>
-          {% elsif page.name == 'Home' %}
-            <h1 id="store_name"><a href="/">{{ store.name }}</a></h1>
-          {% else %}
-            <h2 id="store_name"><a href="/">{{ store.name }}</a></h2>
-          {% endif %}
-        </header>
-
-        <nav id="mobile_nav">
-          <ul>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/cart">Cart</a></li>
-            <li><a href="#site_footer" alt="See more options">More</a></li>
-          </ul>
-        </nav>
+        </div>
+        <div class="span4 site-navigation clearfix" id="navigation">
+          <div class="main-nav">
+            <ul id="main-navigation" class="nav-menu">
+              <li id="menu-item-47" class="menu-item"><a href="http://www.rightbrainstorm.com/">Work</a></li>
+              <li id="menu-item-48" class="menu-item"><a href="http://www.rightbrainstorm.com/about/">About</a></li>
+              <li id="menu-item-219" class="menu-item current-menu-item"><a href="http://www.okllama.com/">Store</a></li>
+              <li id="menu-item-218" class="menu-item"><a href="http://shyamagolden.tumblr.com/">Blog</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
