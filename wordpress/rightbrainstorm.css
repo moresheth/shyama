@@ -22,6 +22,10 @@ body{
     font-style: normal;
 }
 
+.site-footer{
+    display:none;
+}
+
 textarea, kbd,
 .site-description,
 .single-meta,
