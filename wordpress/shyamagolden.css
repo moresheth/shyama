@@ -309,6 +309,23 @@ p{
     width: 33%;
 }
 
+.sticker2x2{
+    margin: -285px 0 0 -285px;
+    height: 570px;
+    width: 570px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.sticker2x2 .sticker img{
+    display: block;
+    float: left;
+    margin: 30px;
+    width: 225px;
+    height: 225px;
+}
+
 @media (max-width: 720px) {
     .site-header{
         height: 150px;
@@ -353,6 +370,16 @@ p{
         right: auto;
         width: auto;
         margin: 0 0 2em 0;
+    }
+    .sticker2x2{
+        margin: -140px 0 0 -140px;
+        height: 280px;
+        width: 280px;
+    }
+    .sticker2x2 .sticker img{
+        margin: 20px;
+        width: 100px;
+        height: 100px;
     }
 }
 
