@@ -219,12 +219,17 @@ p{
     background-image: url(/assets/nav/selected/nav_03blog.png);
 }
 
+.element .thumbnail-meta-data-wrapper{
+    height: 100%;
+    padding: 0;
+}
 
 .element .symbol{
     background-repeat: no-repeat;
     background-size: 250px 125px;
-    width: 250px;
-    height: 125px;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
     text-indent: -9999px;
 }
 
@@ -260,8 +265,6 @@ p{
 /* Covert Operation */
 #post-23 .symbol{
     background: none;
-    width: auto;
-    height: auto;
     text-indent: 0;
 }
 /* Dinosaurs */
@@ -308,6 +311,8 @@ p{
 #footer img{
     width: 33%;
 }
+
+
 
 .sticker2x2{
     margin: -285px 0 0 -285px;
@@ -381,6 +386,9 @@ p{
         width: 100px;
         height: 100px;
     }
+    .element .symbol{
+        background-size: 78% 39%;
+    }
 }
 
 
@@ -400,5 +408,8 @@ p{
         background-size: 80px 33px;
         width: 80px;
         height: 33px;
+    }
+    .element .symbol{
+        background-size: 100% 50%;
     }
 }
