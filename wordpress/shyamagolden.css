@@ -220,6 +220,68 @@ p{
 }
 
 
+.element .symbol{
+    background-repeat: no-repeat;
+    background-size: 250px 125px;
+    width: 250px;
+    height: 125px;
+    text-indent: -9999px;
+}
+
+
+/* Catsquatch */
+#post-28 .symbol{
+    background-image: url(/assets/labels/catsquatch.png);
+}
+/* Stickers */
+#post-121 .symbol{
+    background-image: url(/assets/labels/stickers.png);
+}
+/* Murals */
+#post-93 .symbol{
+    background-image: url(/assets/labels/murals.png);
+}
+/* Airtime */
+#post-83 .symbol{
+    background-image: url(/assets/labels/airtime.png);
+}
+/* Portraits */
+#post-42 .symbol{
+    background-image: url(/assets/labels/portraits.png);
+}
+/* Apparel */
+#post-104 .symbol{
+    background-image: url(/assets/labels/apparel.png);
+}
+/* Rid River Nightcap */
+#post-16 .symbol{
+    background-image: url(/assets/labels/red-river-nightcap.png);
+}
+/* Covert Operation */
+#post-23 .symbol{
+    background: none;
+    width: auto;
+    height: auto;
+    text-indent: 0;
+}
+/* Dinosaurs */
+#post-38 .symbol{
+    background-image: url(/assets/labels/dinosaurs.png);
+}
+/* Letterpress */
+#post-110 .symbol{
+    background-image: url(/assets/labels/letterpress.png);
+}
+/* Silkscreen */
+#post-126 .symbol{
+    background-image: url(/assets/labels/silkscreen.png);
+}
+/* Llama */
+#post-78 .symbol{
+    background-image: url(/assets/labels/llama.png);
+}
+
+
 @media (max-width: 720px) {
     .site-header{
         height: 150px;
