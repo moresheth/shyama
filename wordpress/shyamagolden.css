@@ -281,6 +281,33 @@ p{
     background-image: url(/assets/labels/llama.png);
 }
 
+#container{
+    position: relative;
+}
+#about{
+    margin-right: 360px;
+}
+#about h4{
+    line-height: 30px;
+}
+#links{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+}
+#links ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#footer{
+    clear: both;
+    text-align: center;
+}
+#footer img{
+    width: 33%;
+}
 
 @media (max-width: 720px) {
     .site-header{
@@ -316,6 +343,16 @@ p{
     }
     .nav-menu li{
         float: left;
+    }
+    #about{
+        margin-right: 0;
+    }
+    #links{
+        position: static;
+        top: auto;
+        right: auto;
+        width: auto;
+        margin: 0 0 2em 0;
     }
 }
 
